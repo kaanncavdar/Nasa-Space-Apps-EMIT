@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMIT</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Roboto:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="buttons.css">
+    <link rel="icon" href="favicon.png" type="image/x-icon" />
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Lato', sans-serif;
+        }
+
+        #showcase {
+            background: url('emit.png');
+            background-position: center;
+            height: 500px;
+            width: 100%;
+            padding: 10px;
+            position: relative;
+        }
+
+        #showcase h1 {
+            position: absolute;
+            top: 50%;
+            margin: 0;
+            color: #fff;
+            font-size: 45px;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .main-header {
+            background-color: #0f0a32;
+            padding: 8px 16px;
+        }
+
+        .main-nav {
+            display: inline-block;
+            width: calc(100% - 101px);
+            text-align: right;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .main-nav__items {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .main-nav__item {
+            display: inline-block;
+            margin: 0 10px;
+        }
+
+        .main-header__logo {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 21px;
+        }
+
+        .main-nav__item a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .main-nav__item a:hover,
+        .main-nav__item:hover::before {
+            color: #2E4C6D;
+        }
+
+        .main-nav__item:active::before,
+        .main-nav__item a:active {
+            color: #fff;
+        }
+
+        .main-nav__item::before {
+            content: '\2022';
+            color: #fff;
+        }
+
+        .main-nav__item--login::before {
+            content: none;
+        }
+
+        #how-it-works {
+            padding: 10px;
+            text-align: center;
+        }
+
+        .row {
+            margin-bottom: 40px;
+        }
+
+        .col-3 {
+            display: inline-block;
+            width: 30%;
+            padding: 16px;
+            margin: 8px;
+        }
+
+        .col-2 {
+            display: inline-block;
+            width: calc(50% - 2px);
+            height: 350px;
+            background-color: brown;
+        }
+
+        .icon-box h3 {
+            color: #3e4555;
+            font-size: 26px;
+        }
+
+        .icon-box i {
+            color: #2711ca;
+        }
+
+        .features__left {
+            background: url("features.jpeg");
+            background-size: cover;
+            background-position: top center;
+        }
+
+        .features__right {
+            background-color: #edf5f7;
+            padding: 40px;
+            vertical-align: top;
+        }
+
+        .features__right h3 {
+            font-size: 30px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #3e4555;
+            font-size: 30px;
+        }
+
+        .plan {
+            text-align: center;
+            padding: 5px;
+            width: 33.3%;
+            float: left;
+        }
+
+        .plan__badge {
+            background: #fff;
+            color: #FC997C;
+            padding: 8px;
+            border-radius: 5px;
+        }
+
+        .recommended_plan {
+            color: #fff;
+            background: #396EB0 !important;
+        }
+
+        .inner-plan {
+            background: #edf5f7;
+            padding: 25px 10px;
+            border-radius: 5px;
+            box-shadow: 0px 7px 29px 0px rgba(100, 100, 111, 0.2);
+            transition: box-shadow .6s;
+        }
+
+        .inner-plan:hover {
+            box-shadow: 0px 7px 29px 0px rgba(100, 100, 111, 0.5);
+        }
+
+        .plan__features {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .plan--featured {
+            position: relative;
+            top: -20px;
+        }
+
+        .plan__features li {
+            margin: 6px 0;
+        }
+
+        .clearfix::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        .container {
+            margin: 0 auto;
+            width: 1000px;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .left-content {
+            width: 48%;
+        }
+
+        .right-content {
+            width: 48%;
+        }
+
+        p {
+            padding-left: 100px;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <header class="main-header">
+        <a href="#" class="main-header__logo"></a>
+        <nav class="main-nav">
+            <ul class="main-nav__items">
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="showcase">
+            <h1>EMIT</h1>
+        </section>
+        <section id="what-is-emit">
+            <div class="row">
+                <h2 class="section-title">What is EMIT?</h2>
+                <div class="container">
+                    <div class="left-content">
+                        <p>EMIT (Earth Mineral Dust Source Investigation), the investigation of Earth mineral dust
+                            sources is a research project. This project directly affects the mineral composition of soil
+                            designed to measure and map the space environment.
+                            <br />
+                            <br>
+                            EMIT is the first event dedicated to the study of minerals and minerals released as soil
+                            particles dust aerosols. These dusts are a mixture of mineral dust from human activity is a
+                            significant contributor to its direct radiative impact. EMIT has been informed that such
+                            powders are mineral in understanding its direct radiative effect due to uncertainties in its
+                            composition. aims to address the challenges.
+
+                            <br>
+                            <br />
+                            The EMIT project, funded by NASA, is a new study of the mineralization of critical
+                            dust-forming regions. to the International Space Station (ISS) to directly measure and map
+                            its composition. instrument. EMIT will transmit visible short wavelengths through imaging
+                            spectroscopy. tight mineral detection, quantification, and identification by revealing
+                            mineral signatures in the range of to make mapping possible.
+
+
+                            <br />
+                        </p>
+                    </div>
+                    <div class="right-content">
+                        <p>
+                            The main objectives of this mission are:
+                            <br>
+                            <br />
+                            1. The sign and magnitude of dust-related radiative forcing on a regional and global scale
+                            to limit EMIT aims to achieve this goal by taking the surface mineralogy used to initiate
+                            ESMs reaches.
+                            <br>
+                            <br />
+                            2. Increase or decrease of existing dust sources in future climate scenarios foresee. EMIT,
+                            soil restricted to arid dust source areas exposed to risk using mineralogy to achieve this
+                            goal.
+                            <br>
+                            <br />
+                            EMIT'in enstrümanı, spektrumun görsel kısa dalga boyundan kısa dalga kızılötesine kadar olan
+                            kısmını çözecek bir Dyson görüntüleme spektrometresidir. EMIT, demir oksitleri, kil
+                            mineralleri, sülfatlar, karbonatlar ve diğer toz oluşturan minerallerin belirgin spektral
+                            emilimlerini çözmek için kesintisiz spektroskopik ölçümlerle mineralojiyi haritalayacaktır.
+                            <br>
+                            <br />
+                            As a result, the EMIT project has been developing a new approach to understand the direct
+                            radiative effects of mineral dusts. aims to measure and map soil mineral composition, so
+                            that such dust can be used as a proxy for climate on the impact of the globalization of the
+                            world on the world.
+                        </p>
+                    </div>
+                </div>
+
+        </section>
+        <section id="content">
+            <div class="left">
+                <center>
+                    <h2>The mission has two main objectives:</h2>
+                </center>
+                <p>
+                    <b>1. Radiative Forcing (RF) Limitation due to Dust:</b>
+                    <br />
+                    EMIT aims to limit the sign and magnitude of dust-induced RF on a regional and global scale. aims to
+                    EMIT aims to accurately measure soil mineral composition in critical dust-generating areas. to
+                    estimate the sign and magnitude of radiative forcing with the data provided by measuring is used.
+                    Understanding the mineralogy of dust is an important parameter for climate modeling. provides a more
+                    precise estimate of the strain.
+                    <br>
+                    <br /><b>2. Forecasting Future Dust Sources: </b>
+                    <br />EMIT also aims to predict how existing dust sources may increase or decrease under future
+                    climate scenarios. EMIT aims to identify by initializing ESM prediction models using the mineralogy
+                    of dust under different climatic conditions. help predict possible changes in their resources.
+                </p>
+                </p>
+            </div>
+            <div class="right">
+                <img src="emit1.jpeg" alt="Resim Açıklaması">
+            </div>
+        </section>
+        <section id="plans">
+            <div class="row">
+                <h2 class="section-title">Data Graphs</h2>
+                <div class="container clearfix">
+                    <div class="plan">
+                        <div class="inner-plan">
+                            <img src="data1.jpeg" width="300" alt="data1_photo">
+                            <p>Carbon dioxide data</p>
+                        </div>
+                    </div>
+                    <div class="plan plan--featured">
+
+                    </div>
+                    <div class="plan">
+                        <div class="inner-plan">
+                            <ul class="plan__features">
+                                <img src="data2.jpeg" width="300" alt="data2_photo">
+                                <p>Turkey's methane gas data in recent years</p>
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+</body>
+
+</html>
